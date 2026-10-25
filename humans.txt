@@ -1,0 +1,5 @@
+/* TEAM */
+Site: Alana Chelangat portfolio
+Contact: alanachelangat@gmail.com
+Language: English
+Standards: HTML5, CSS3
