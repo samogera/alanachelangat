@@ -19,6 +19,8 @@ The website of **Alana Chelangat**, Kenyan climate justice advocate, author and 
 Plain HTML, CSS and JavaScript. No build step and nothing to install.
 
 - `assets/css/style.css`: all styles. Colours and fonts are at the top in `:root`.
+- `assets/fonts/`: Playfair Display (headings) and Inter (text), hosted with the site so they load fast everywhere (SIL Open Font License).
+- On phones, long rows of cards (stats, projects, media, timeline, talks) become swipeable slides with dots; on tablets and computers they show as grids.
 - `assets/js/main.js`: mobile menu, video pop-up, media kit bio tabs, contact form.
 - Navigation: Home, About, Work, Speaking, Writing and Contact sit in the header; Media is linked from the footer and from buttons across the site.
 - `assets/img/`: photos (`.jpg` plus `.webp` copies for speed).
