@@ -1,36 +1,57 @@
 /* Alana Chelangat · site behaviour
-   - sticky header shadow + mobile menu
+   - sticky header + full-screen mobile menu
    - video pop-up player (YouTube, Facebook, Instagram)
    - media kit bio tabs + copy button
-   - contact form (opens the visitor's email app with the message ready to send)
+   - contact form: emails Alana (copy to her parent) through FormSubmit, with an email-app fallback
    Everything degrades gracefully: without JavaScript every link still opens the original page. */
 (function () {
   'use strict';
   var EMAIL = 'alanachelangat@gmail.com';
+  var PARENT_CC = ['chemruto', 'gmail.com'].join('@');
+  var FORM_ENDPOINT = 'https://formsubmit.co/ajax/' + EMAIL;
 
-  /* ---------- Header ---------- */
+  /* ---------- Header + mobile menu ---------- */
+  var root = document.documentElement;
   var header = document.querySelector('.site-header');
   var toggle = document.querySelector('.menu-toggle');
+  var menu = document.getElementById('mobile-menu');
   function onScroll() { if (header) header.classList.toggle('scrolled', window.scrollY > 8); }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
-  if (toggle && header) {
-    toggle.addEventListener('click', function () {
-      var open = header.classList.toggle('nav-open');
+  if (toggle && menu) {
+    var label = toggle.querySelector('.label');
+    var desktop = window.matchMedia('(min-width: 1081px)');
+    var setMenu = function (open, returnFocus) {
+      root.classList.toggle('menu-open', open);
+      root.classList.toggle('menu-lock', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
       toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    });
+      if (label) label.textContent = open ? 'Close' : 'Menu';
+      if ('inert' in menu) menu.inert = !open;
+      if (open) { var first = menu.querySelector('a'); if (first) setTimeout(function () { first.focus({ preventScroll: true }); }, 60); }
+      else if (returnFocus) toggle.focus();
+    };
+    setMenu(false);
+    toggle.addEventListener('click', function () { setMenu(!root.classList.contains('menu-open')); });
+    menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && header.classList.contains('nav-open')) {
-        header.classList.remove('nav-open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.focus();
-      }
+      if (e.key === 'Escape' && root.classList.contains('menu-open')) setMenu(false, true);
     });
+    var onBp = function () { if (desktop.matches && root.classList.contains('menu-open')) setMenu(false); };
+    if (desktop.addEventListener) desktop.addEventListener('change', onBp); else if (desktop.addListener) desktop.addListener(onBp);
   }
 
-  /* ---------- Footer year ---------- */
+  /* ---------- Footer ---------- */
   document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
+  document.querySelectorAll('[data-to-top]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      var main = document.getElementById('main');
+      if (main) { main.setAttribute('tabindex', '-1'); main.focus({ preventScroll: true }); }
+    });
+  });
 
   /* ---------- Video pop-up ---------- */
   var modal = document.getElementById('video-modal');
@@ -112,28 +133,87 @@
   var form = document.getElementById('contact-form');
   if (form) {
     var doneBox = document.getElementById('form-done');
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (!form.reportValidity()) return;
-      var d = new FormData(form);
-      var type = d.get('type') || 'Request';
-      var org = d.get('organisation') ? ' (' + d.get('organisation') + ')' : '';
-      var subject = type + ' for Alana Chelangat' + org;
-      var body = [
-        'Name: ' + (d.get('name') || ''),
-        'Email: ' + (d.get('email') || ''),
-        'Organisation: ' + (d.get('organisation') || ''),
-        'Request: ' + type,
-        'Event date and location: ' + (d.get('when') || ''),
-        '',
-        d.get('message') || ''
-      ].join('\n');
-      window.location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    var sendBtn = form.querySelector('button[type="submit"]');
+    var sendLabel = form.querySelector('[data-send-label]');
+    var errorEl = form.querySelector('[data-form-error]');
+    var sentMsg = doneBox.querySelector('[data-done-sent]');
+    var mailtoMsg = doneBox.querySelector('[data-done-mailto]');
+    var doneEmail = doneBox.querySelector('[data-done-email]');
+
+    var showDone = function (how, email) {
+      sentMsg.hidden = how !== 'sent';
+      mailtoMsg.hidden = how !== 'mailto';
+      if (doneEmail && email) doneEmail.textContent = email;
       form.hidden = true;
       doneBox.hidden = false;
       doneBox.querySelector('h2').focus();
+    };
+    var busy = function (on) {
+      form.setAttribute('aria-busy', on ? 'true' : 'false');
+      sendBtn.disabled = on;
+      sendLabel.textContent = on ? 'Sending…' : 'Send request';
+    };
+    var openMailto = function (subject, lines) {
+      window.location.href = 'mailto:' + EMAIL + '?cc=' + encodeURIComponent(PARENT_CC) +
+        '&subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+    };
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      errorEl.hidden = true;
+      if (!form.reportValidity()) return;
+      var d = new FormData(form);
+      var val = function (k) { return String(d.get(k) || '').trim(); };
+      var type = val('type') || 'Request';
+      var subject = type + ' for Alana Chelangat' + (val('organisation') ? ' (' + val('organisation') + ')' : '');
+      if (val('_honey')) { showDone('sent'); return; } /* a bot filled the hidden field */
+
+      var lines = [
+        'Name: ' + val('name'),
+        'Email: ' + val('email'),
+        'Organisation: ' + val('organisation'),
+        'Request: ' + type,
+        'Event date and location: ' + val('when'),
+        '',
+        val('message')
+      ];
+      var payload = {
+        'Name': val('name'),
+        'email': val('email'),
+        'Organisation': val('organisation') || '—',
+        'Request': type,
+        'Event date and location': val('when') || '—',
+        'Message': val('message'),
+        _subject: subject,
+        _cc: PARENT_CC,
+        _replyto: val('email'),
+        _template: 'table',
+        _captcha: 'false',
+        _autoresponse: 'Thank you for contacting Alana Chelangat. Your request has been received and will be reviewed by her parent. We will reply as soon as we can.'
+      };
+
+      busy(true);
+      var ctrl = 'AbortController' in window ? new AbortController() : null;
+      var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 20000);
+      fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload),
+        signal: ctrl ? ctrl.signal : undefined
+      })
+        .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, data: j }; }); })
+        .then(function (res) {
+          if (res.ok && String(res.data.success) === 'true') { showDone('sent', val('email')); return; }
+          throw new Error((res.data && res.data.message) || 'Send failed');
+        })
+        .catch(function () {
+          /* Could not send automatically: open the visitor's email app instead, with her parent copied in. */
+          openMailto(subject, lines);
+          showDone('mailto');
+        })
+        .then(function () { clearTimeout(timer); busy(false); });
     });
     var again = document.querySelector('[data-form-again]');
-    if (again) again.addEventListener('click', function () { form.reset(); form.hidden = false; doneBox.hidden = true; form.querySelector('input').focus(); });
+    if (again) again.addEventListener('click', function () { form.reset(); form.hidden = false; doneBox.hidden = true; var first = document.getElementById('c-name'); if (first) first.focus(); });
   }
 })();

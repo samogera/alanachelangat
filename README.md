@@ -14,12 +14,13 @@ The website of **Alana Chelangat**, Kenyan climate justice advocate, author and 
 | Speaking | `speaking.html` | Child Protection keynote, COP28, COP29, youth assembly, talk topics |
 | Media | `media.html` | Podcast, TV videos (play in a pop-up), press, guest features, media kit |
 | Writing | `writing.html` | *Alana's Magical Adventure at Mazingira Park* and articles |
-| Contact | `contact.html` | Booking form (opens the visitor's email app) and all links |
+| Contact | `contact.html` | Booking form (emails Alana, with a copy to her parent) and all links |
 
 Plain HTML, CSS and JavaScript. No build step and nothing to install.
 
 - `assets/css/style.css`: all styles. Colours and fonts are at the top in `:root`.
 - `assets/js/main.js`: mobile menu, video pop-up, media kit bio tabs, contact form.
+- Navigation: Home, About, Work, Speaking, Writing and Contact sit in the header; Media is linked from the footer and from buttons across the site.
 - `assets/img/`: photos (`.jpg` plus `.webp` copies for speed).
 - `assets/logos/`, `assets/icons/`: media logos, social icons, favicon set.
 - `assets/docs/Alana-Chelangat-Media-Kit.pdf`: the downloadable media kit.
@@ -45,5 +46,7 @@ The site is served by **GitHub Pages** from the `main` branch (root folder): *Se
 ## Editing tips
 
 - **Add a video:** copy one of the cards in `media.html`. For YouTube use `data-embed="youtube" data-src="VIDEO_ID"`; for Facebook or Instagram use `data-embed="facebook"` or `data-embed="instagram"` with the full video URL in `data-src`. The video then plays in the pop-up.
-- **Contact form:** it opens the visitor's email app with the message ready to send to `alanachelangat@gmail.com`. To receive messages without email apps, create a free form at [Formspree](https://formspree.io) and send the form there instead.
+- **Contact form:** messages are sent by [FormSubmit](https://formsubmit.co) to `alanachelangat@gmail.com`, with a copy (CC) to her parent, and the sender gets an automatic thank-you reply. Both addresses are set at the top of `assets/js/main.js`.
+  - **One-time activation:** the first time someone sends the form, FormSubmit emails `alanachelangat@gmail.com` an "Activate Form" link. Click it once and every later message is delivered. After activating, FormSubmit also offers a private code that can replace the email address in `FORM_ENDPOINT`, so the address isn't visible in the code.
+  - If FormSubmit can't be reached, the form falls back to opening the visitor's email app with the message ready, still copying her parent.
 - **Privacy:** Alana is a minor. Keep her school, home location and family phone numbers off the site. All requests go through her parent.
