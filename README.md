@@ -15,11 +15,12 @@ The website of **Alana Chelangat**, Kenyan climate justice advocate, author and 
 | Media | `media.html` | Podcast, TV videos (play in a pop-up), press, guest features, media kit |
 | Writing | `writing.html` | *Alana's Magical Adventure at Mazingira Park* and articles |
 | Contact | `contact.html` | Booking form (emails Alana, with a copy to her parent) and all links |
+| Privacy, Terms | `privacy.html`, `terms.html` | How details are handled; parent review of every request |
 
 Plain HTML, CSS and JavaScript. No build step and nothing to install.
 
 - `assets/css/style.css`: all styles. Colours and fonts are at the top in `:root`.
-- `assets/fonts/`: Playfair Display (headings) and Inter (text), hosted with the site so they load fast everywhere (SIL Open Font License).
+- `assets/fonts/`: Inter Tight (headings) and Inter (text), hosted with the site so they load fast everywhere (SIL Open Font License).
 - On phones, long rows of cards (stats, projects, media, timeline, talks) become swipeable slides with dots; on tablets and computers they show as grids.
 - `assets/js/main.js`: mobile menu, video pop-up, media kit bio tabs, contact form.
 - Navigation: Home, About, Work, Speaking, Writing and Contact sit in the header; Media is linked from the footer and from buttons across the site.

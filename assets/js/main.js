@@ -18,6 +18,17 @@
   function onScroll() { if (header) header.classList.toggle('scrolled', window.scrollY > 8); }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+  // Home: show the logo in the header only once the big name in the hero has scrolled out of view
+  var heroName = document.getElementById('hero-name');
+  if (header && header.classList.contains('brand-reveal')) {
+    if (heroName && 'IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        header.classList.toggle('show-brand', !entries[0].isIntersecting && entries[0].boundingClientRect.top < 0);
+      }, { rootMargin: '-80px 0px 0px 0px' }).observe(heroName);
+    } else {
+      header.classList.add('show-brand');
+    }
+  }
   if (toggle && menu) {
     var label = toggle.querySelector('.label');
     var desktop = window.matchMedia('(min-width: 1081px)');
