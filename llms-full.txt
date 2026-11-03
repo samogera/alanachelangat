@@ -1,6 +1,6 @@
 # Alana Chelangat: full profile
 
-Official site: https://samogera.github.io/alanachelangat/
+Official site: https://alanachelangat.vercel.app/
 Contact: alanachelangat@gmail.com (every request is reviewed by her parent)
 
 ## Short bio (50 words)
@@ -63,3 +63,8 @@ Alana was a keynote speaker at COP28 in Dubai, spoke on a children's rights pane
 - University College Cork Youth Climate Justice blog: "Young Kenyan Climate Advocate Takes on COP29", 5 February 2025
 - Boots on the Ground Podcast (Instagram)
 - Green Warriors TV (LinkedIn): "Empowering future stewards: meet Alana Chelangat"
+
+## Dunia Endelevu
+
+Alana founded Dunia Endelevu ("a sustainable world" in Kiswahili), a youth-led climate incubator in Kenya: https://dunia-endelevu.vercel.app/
+Children under 18 join one of three free tracks: Storyteller (publish their own climate book), Voice (co-host the podcast Climate Gumzo) and Diplomat (speak at real events). Dunia Endelevu also publishes free illustrated climate storybooks for children aged 6 to 10 (https://dunia-endelevu.vercel.app/learn.html) and is piloting early warning alerts for schools on air quality, heat and heavy rain.

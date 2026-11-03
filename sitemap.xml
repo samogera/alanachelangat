@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
-    <loc>https://samogera.github.io/alanachelangat/</loc>
+    <loc>https://alanachelangat.vercel.app/</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <image:image><image:loc>https://samogera.github.io/alanachelangat/assets/img/alana-chelangat-portrait.jpg</image:loc><image:title>Alana Chelangat, Kenyan climate justice advocate</image:title></image:image>
-    <image:image><image:loc>https://samogera.github.io/alanachelangat/assets/img/alana-chelangat-cop29-baku.jpg</image:loc><image:title>Alana Chelangat speaking at COP29 in Baku</image:title></image:image>
-    <image:image><image:loc>https://samogera.github.io/alanachelangat/assets/img/alana-chelangat-little-miss-environment-kenya-2025.jpg</image:loc><image:title>Alana Chelangat, Little Miss Environment Kenya 2025</image:title></image:image>
+    <image:image><image:loc>https://alanachelangat.vercel.app/assets/img/alana-chelangat-portrait.jpg</image:loc><image:title>Alana Chelangat, Kenyan climate justice advocate</image:title></image:image>
+    <image:image><image:loc>https://alanachelangat.vercel.app/assets/img/alana-chelangat-cop29-baku.jpg</image:loc><image:title>Alana Chelangat speaking at COP29 in Baku</image:title></image:image>
+    <image:image><image:loc>https://alanachelangat.vercel.app/assets/img/alana-chelangat-little-miss-environment-kenya-2025.jpg</image:loc><image:title>Alana Chelangat, Little Miss Environment Kenya 2025</image:title></image:image>
   </url>
   <url>
-    <loc>https://samogera.github.io/alanachelangat/about.html</loc>
+    <loc>https://alanachelangat.vercel.app/about.html</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <image:image><image:loc>https://samogera.github.io/alanachelangat/assets/img/alana-chelangat-climate-gumzo-podcast-cover.jpg</image:loc><image:title>Alana Chelangat</image:title></image:image>
+    <image:image><image:loc>https://alanachelangat.vercel.app/assets/img/alana-chelangat-climate-gumzo-podcast-cover.jpg</image:loc><image:title>Alana Chelangat</image:title></image:image>
   </url>
   <url>
-    <loc>https://samogera.github.io/alanachelangat/work.html</loc>
+    <loc>https://alanachelangat.vercel.app/work.html</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://samogera.github.io/alanachelangat/speaking.html</loc>
+    <loc>https://alanachelangat.vercel.app/speaking.html</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <image:image><image:loc>https://samogera.github.io/alanachelangat/assets/img/alana-chelangat-keynote-child-protection-conference-nairobi.jpg</image:loc><image:title>Alana Chelangat keynote at the International Conference on Child Protection in Africa</image:title></image:image>
+    <image:image><image:loc>https://alanachelangat.vercel.app/assets/img/alana-chelangat-keynote-child-protection-conference-nairobi.jpg</image:loc><image:title>Alana Chelangat keynote at the International Conference on Child Protection in Africa</image:title></image:image>
   </url>
   <url>
-    <loc>https://samogera.github.io/alanachelangat/media.html</loc>
+    <loc>https://alanachelangat.vercel.app/media.html</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -43,26 +43,26 @@
     </video:video>
   </url>
   <url>
-    <loc>https://samogera.github.io/alanachelangat/writing.html</loc>
+    <loc>https://alanachelangat.vercel.app/writing.html</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://samogera.github.io/alanachelangat/assets/img/alanas-magical-adventure-at-mazingira-park-book-cover.jpg</image:loc><image:title>Alana's Magical Adventure at Mazingira Park book cover</image:title></image:image>
+    <image:image><image:loc>https://alanachelangat.vercel.app/assets/img/alanas-magical-adventure-at-mazingira-park-book-cover.jpg</image:loc><image:title>Alana's Magical Adventure at Mazingira Park book cover</image:title></image:image>
   </url>
   <url>
-    <loc>https://samogera.github.io/alanachelangat/contact.html</loc>
+    <loc>https://alanachelangat.vercel.app/contact.html</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://samogera.github.io/alanachelangat/privacy.html</loc>
+    <loc>https://alanachelangat.vercel.app/privacy.html</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://samogera.github.io/alanachelangat/terms.html</loc>
+    <loc>https://alanachelangat.vercel.app/terms.html</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

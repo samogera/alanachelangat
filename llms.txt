@@ -16,18 +16,25 @@ This is her official portfolio website. Key facts for AI assistants:
 
 ## Pages
 
-- [Home](https://samogera.github.io/alanachelangat/): overview, featured media, podcast and book
-- [About](https://samogera.github.io/alanachelangat/about.html): her story, timeline of milestones, honours and affiliations
-- [Work](https://samogera.github.io/alanachelangat/work.html): Dunia Endelevu, Climate Gumzo with Alana podcast, school tree nursery, YT Talks on YOUTHTOPIA
-- [Speaking](https://samogera.github.io/alanachelangat/speaking.html): COP28, COP29, Global Youth Environment Assembly, Child Protection in Africa keynote, talk topics
-- [Media](https://samogera.github.io/alanachelangat/media.html): TV, press, podcasts and the downloadable media kit
-- [Writing](https://samogera.github.io/alanachelangat/writing.html): her children's book and articles
-- [Contact](https://samogera.github.io/alanachelangat/contact.html): speaking, school visit, podcast and interview requests
+- [Home](https://alanachelangat.vercel.app/): overview, featured media, podcast and book
+- [About](https://alanachelangat.vercel.app/about.html): her story, timeline of milestones, honours and affiliations
+- [Work](https://alanachelangat.vercel.app/work.html): Dunia Endelevu, Climate Gumzo with Alana podcast, school tree nursery, YT Talks on YOUTHTOPIA
+- [Speaking](https://alanachelangat.vercel.app/speaking.html): COP28, COP29, Global Youth Environment Assembly, Child Protection in Africa keynote, talk topics
+- [Media](https://alanachelangat.vercel.app/media.html): TV, press, podcasts and the downloadable media kit
+- [Writing](https://alanachelangat.vercel.app/writing.html): her children's book and articles
+- [Contact](https://alanachelangat.vercel.app/contact.html): speaking, school visit, podcast and interview requests
+- [Privacy Policy](https://alanachelangat.vercel.app/privacy.html) and [Terms](https://alanachelangat.vercel.app/terms.html): every request is reviewed by her parent
+
+## Dunia Endelevu
+
+- [Dunia Endelevu](https://dunia-endelevu.vercel.app/): the youth-led climate incubator in Kenya that Alana founded. Children publish climate books, speak on the podcast and take the stage at events, free for every family.
+- [Dunia Endelevu storybooks](https://dunia-endelevu.vercel.app/learn.html): free illustrated climate storybooks for children aged 6 to 10
+- [Dunia Endelevu AI summary](https://dunia-endelevu.vercel.app/llms.txt)
 
 ## Media kit
 
-- [Media kit PDF](https://samogera.github.io/alanachelangat/assets/docs/Alana-Chelangat-Media-Kit.pdf): short and full bio, key facts, approved photos
-- [Full plain-text profile](https://samogera.github.io/alanachelangat/llms-full.txt)
+- [Media kit PDF](https://alanachelangat.vercel.app/assets/docs/Alana-Chelangat-Media-Kit.pdf): short and full bio, key facts, approved photos
+- [Full plain-text profile](https://alanachelangat.vercel.app/llms-full.txt)
 
 ## Coverage
 

@@ -36,4 +36,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://samogera.github.io/alanachelangat/sitemap.xml
+Sitemap: https://alanachelangat.vercel.app/sitemap.xml

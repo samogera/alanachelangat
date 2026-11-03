@@ -708,11 +708,9 @@ button.card { font: inherit; cursor: pointer; width: 100%; }
   body { background: #fff; }
 }
 
-/* ---------- Logo: a sprout mark and the name ---------- */
-.brand { display: inline-flex; align-items: center; gap: 11px; }
-.brand-mark { flex: 0 0 auto; width: 36px; height: 36px; border-radius: 11px; box-shadow: 0 6px 14px -8px rgba(22, 54, 42, .7); transition: transform .35s ease; }
-.brand:hover .brand-mark { transform: rotate(-6deg); }
-.brand-word { font-family: var(--font-display); font-weight: 600; font-size: 20px; letter-spacing: -0.035em; }
+/* ---------- Logo: the name, set in Inter Tight (the sprout is the favicon) ---------- */
+.brand { display: inline-flex; align-items: center; }
+.brand-word { font-family: var(--font-display); font-weight: 650; font-size: 22px; letter-spacing: -0.04em; }
 /* Home: the hero already shows the name, so the logo appears once it has scrolled away */
 .js .brand-reveal .brand { opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity .35s ease, transform .35s ease, visibility 0s linear .35s; }
 .js .brand-reveal.show-brand .brand { opacity: 1; visibility: visible; transform: none; transition: opacity .35s ease, transform .35s ease, visibility 0s; }
