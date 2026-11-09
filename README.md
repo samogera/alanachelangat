@@ -1,6 +1,6 @@
 # Alana Chelangat · official portfolio
 
-The website of **Alana Chelangat**, Kenyan climate justice advocate, author and podcaster: founder of Dunia Endelevu, host of *Climate Gumzo with Alana* and Little Miss Environment Kenya 2025.
+The website of **Alana Chelangat**, Kenyan climate advocate, author and podcaster: founder of Dunia Endelevu, host of *Climate Gumzo with Alana* and Little Miss Environment Kenya 2025.
 
 **Live site:** https://alanachelangat.com/
 
