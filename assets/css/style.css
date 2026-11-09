@@ -346,6 +346,17 @@ a.feature:hover { transform: translateY(-3px); color: var(--ink); }
 .feature .big-num { font-family: var(--font-display); font-weight: 600; font-size: 64px; line-height: 1; letter-spacing: -0.035em; color: var(--forest); }
 .feature .tagline { font-family: var(--font-display); font-weight: 600; font-size: 26px; line-height: 1.1; letter-spacing: -0.035em; }
 .spotify-embed { width: 100%; border: 0; border-radius: 12px; display: block; background: var(--forest-2); }
+/* Spotify loads only when asked: a light placeholder first, the player on click */
+.spotify-facade { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 16px; width: 100%; box-sizing: border-box; padding: 16px; border-radius: 12px; background: #283A30; color: var(--ground); }
+.spotify-facade img { width: 120px; height: 120px; border-radius: 8px; object-fit: cover; flex: 0 0 auto; }
+.spotify-facade .sf-text { display: flex; flex-direction: column; gap: 4px; flex: 1 1 140px; min-width: 0; }
+.spotify-facade .sf-text b { font-size: 16px; font-weight: 600; line-height: 1.25; }
+.spotify-facade .sf-text span { font-size: 13px; color: var(--forest-ink); }
+.spotify-facade .sf-play { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 18px; border: 0; border-radius: 999px; background: #1ED760; color: #0B0B0B; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
+.spotify-facade .sf-play:hover { background: #3BE477; }
+.spotify-facade--tall { flex-direction: column; justify-content: center; text-align: center; }
+.spotify-facade--tall img { width: 160px; height: 160px; }
+.spotify-facade--tall .sf-text { flex: 0 0 auto; align-items: center; }
 
 /* ---------- Book band ---------- */
 .book-band { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-xl); padding: clamp(28px, 5vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 48px; align-items: center; }

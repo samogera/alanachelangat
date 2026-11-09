@@ -266,4 +266,19 @@
     var again = document.querySelector('[data-form-again]');
     if (again) again.addEventListener('click', function () { form.reset(); form.hidden = false; doneBox.hidden = true; var first = document.getElementById('c-name'); if (first) first.focus(); });
   }
+  /* Spotify player: load it only when someone asks to listen (keeps the page fast) */
+  document.querySelectorAll('.spotify-facade').forEach(function (box) {
+    var btn = box.querySelector('.sf-play');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.className = 'spotify-embed';
+      f.title = box.getAttribute('data-title') || 'Spotify player';
+      f.src = box.getAttribute('data-src');
+      f.height = box.getAttribute('data-height') || '152';
+      f.setAttribute('allow', 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture');
+      box.replaceWith(f);
+      f.focus();
+    });
+  });
 })();
