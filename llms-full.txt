@@ -68,3 +68,4 @@ Alana was a keynote speaker at COP28 in Dubai, spoke on a children's rights pane
 
 Alana founded Dunia Endelevu ("a sustainable world" in Kiswahili), a youth-led climate incubator in Kenya: https://duniaendelevu.org/
 Children under 18 join one of three free tracks: Storyteller (publish their own climate book), Voice (co-host the podcast Climate Gumzo) and Diplomat (speak at real events). Dunia Endelevu also publishes free illustrated climate storybooks for children aged 6 to 10 (https://duniaendelevu.org/learn) and is piloting early warning alerts for schools on air quality, heat and heavy rain.
+- Dunia Alerts, early warnings for Nairobi schools (pilot): https://alerts.duniaendelevu.org/about
