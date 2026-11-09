@@ -36,4 +36,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://alanachelangat.vercel.app/sitemap.xml
+Sitemap: https://alanachelangat.com/sitemap.xml

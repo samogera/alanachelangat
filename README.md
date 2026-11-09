@@ -2,7 +2,7 @@
 
 The website of **Alana Chelangat**, Kenyan climate justice advocate, author and podcaster: founder of Dunia Endelevu, host of *Climate Gumzo with Alana* and Little Miss Environment Kenya 2025.
 
-**Live site:** https://alanachelangat.vercel.app/
+**Live site:** https://alanachelangat.com/
 
 ## What's inside
 
@@ -35,16 +35,18 @@ Plain HTML, CSS and JavaScript. No build step and nothing to install.
 - `sitemap.xml` lists every page with images and video. `robots.txt` welcomes search engines and AI crawlers.
 - `llms.txt` and `llms-full.txt` give AI assistants a clean summary and full profile.
 
-After the site is live, submit `https://alanachelangat.vercel.app/sitemap.xml` in [Google Search Console](https://search.google.com/search-console) and [Bing Webmaster Tools](https://www.bing.com/webmasters) to get indexed faster.
+After the site is live, submit `https://alanachelangat.com/sitemap.xml` in [Google Search Console](https://search.google.com/search-console) and [Bing Webmaster Tools](https://www.bing.com/webmasters) to get indexed faster.
 
 ## Publishing
 
-The site is served by **GitHub Pages** from the `main` branch (root folder): *Settings → Pages → Deploy from a branch → main / (root)*.
+The site is hosted on **Vercel** at **https://alanachelangat.com**, deployed from the `main` branch of this repository. Every push to `main` goes live in about a minute.
 
-### Using a custom domain later (for example `alanachelangat.com`)
-1. Add the domain in *Settings → Pages → Custom domain* (GitHub creates a `CNAME` file).
-2. Find and replace `https://alanachelangat.vercel.app/` with `https://alanachelangat.com/` in all `.html`, `sitemap.xml`, `robots.txt`, `llms.txt` and `llms-full.txt` files.
-3. In `404.html`, change `<base href="/alanachelangat/">` to `<base href="/">`.
+`vercel.json`:
+- **Clean addresses:** pages are served as `/about`, `/work`, `/speaking`… Old links ending in `.html` are redirected there permanently, so nothing breaks.
+- **One address for Google:** `alanachelangat.vercel.app` and `www.alanachelangat.com` redirect to `https://alanachelangat.com`.
+- Security headers, and long caching for images, fonts and icons.
+
+Internal links use root paths (`/about`, `/media#podcast`), so pages work at any depth.
 
 ## Editing tips
 
