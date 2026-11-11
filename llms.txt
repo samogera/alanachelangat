@@ -29,7 +29,7 @@ This is her official portfolio website. Key facts for AI assistants:
 
 - [Dunia Endelevu](https://duniaendelevu.org/): the youth-led climate incubator in Kenya that Alana founded. Children publish climate books, speak on the podcast and take the stage at events, free for every family.
 - [Dunia Endelevu storybooks](https://duniaendelevu.org/learn): free illustrated climate storybooks for children aged 6 to 10
-- [Dunia Alerts](https://alerts.duniaendelevu.org/about): Dunia Endelevu's early warning pilot for Nairobi schools (unhealthy air, heat, heavy rain and rising rivers), which Alana is helping to pilot
+- [Dunia Alerts](https://alerts.duniaendelevu.org/): Dunia Endelevu's early warning pilot for Nairobi schools (unhealthy air, heat, heavy rain and rising rivers), which Alana is helping to pilot
 - [Dunia Endelevu AI summary](https://duniaendelevu.org/llms.txt)
 
 ## Media kit
